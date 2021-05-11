@@ -10,8 +10,6 @@
 		1960A0679D11BE32AB7C4D1D /* Pods_VFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57629CFA15C41906729764A /* Pods_VFood.framework */; };
 		310A574C2642EBF8008B010B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310A574B2642EBF8008B010B /* AppDelegate.swift */; };
 		310A574E2642EBF8008B010B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310A574D2642EBF8008B010B /* SceneDelegate.swift */; };
-		310A57502642EBF8008B010B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310A574F2642EBF8008B010B /* ViewController.swift */; };
-		310A57532642EBF8008B010B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310A57512642EBF8008B010B /* Main.storyboard */; };
 		310A57552642EBF9008B010B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310A57542642EBF9008B010B /* Assets.xcassets */; };
 		310A57582642EBF9008B010B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310A57562642EBF9008B010B /* LaunchScreen.storyboard */; };
 		31ACAD192647D28300850ABA /* VFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACAD182647D28300850ABA /* VFoodModel.swift */; };
@@ -22,14 +20,13 @@
 		31ACAD252649A57700850ABA /* MarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ACAD232649A57700850ABA /* MarketViewController.xib */; };
 		31ACAD282649A5FE00850ABA /* MarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACAD262649A5FE00850ABA /* MarketCollectionViewCell.swift */; };
 		31ACAD292649A5FE00850ABA /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ACAD272649A5FE00850ABA /* CollectionViewCell.xib */; };
+		31ACAD2B264AFEDB00850ABA /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ACAD2A264AFEDB00850ABA /* Configs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		310A57482642EBF8008B010B /* VFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310A574B2642EBF8008B010B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		310A574D2642EBF8008B010B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		310A574F2642EBF8008B010B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		310A57522642EBF8008B010B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		310A57542642EBF9008B010B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310A57572642EBF9008B010B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310A57592642EBF9008B010B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +38,7 @@
 		31ACAD232649A57700850ABA /* MarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketViewController.xib; sourceTree = "<group>"; };
 		31ACAD262649A5FE00850ABA /* MarketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewCell.swift; sourceTree = "<group>"; };
 		31ACAD272649A5FE00850ABA /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		31ACAD2A264AFEDB00850ABA /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		51DD09149944555D1653F638 /* Pods-VFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFood.release.xcconfig"; path = "Target Support Files/Pods-VFood/Pods-VFood.release.xcconfig"; sourceTree = "<group>"; };
 		E221C86A67CD0A56D05A5692 /* Pods-VFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFood.debug.xcconfig"; path = "Target Support Files/Pods-VFood/Pods-VFood.debug.xcconfig"; sourceTree = "<group>"; };
 		E57629CFA15C41906729764A /* Pods_VFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,13 +88,12 @@
 			children = (
 				310A574B2642EBF8008B010B /* AppDelegate.swift */,
 				310A574D2642EBF8008B010B /* SceneDelegate.swift */,
-				310A574F2642EBF8008B010B /* ViewController.swift */,
-				310A57512642EBF8008B010B /* Main.storyboard */,
 				310A57542642EBF9008B010B /* Assets.xcassets */,
 				310A57562642EBF9008B010B /* LaunchScreen.storyboard */,
 				310A57592642EBF9008B010B /* Info.plist */,
 				31ACAD182647D28300850ABA /* VFoodModel.swift */,
 				31ACAD202649846300850ABA /* MarketsModel.swift */,
+				31ACAD2A264AFEDB00850ABA /* Configs.swift */,
 				31ACAD1A2649810800850ABA /* LoginViewController.swift */,
 				31ACAD1B2649810800850ABA /* LoginViewController.xib */,
 				31ACAD222649A57700850ABA /* MarketViewController.swift */,
@@ -179,7 +176,6 @@
 				31ACAD292649A5FE00850ABA /* CollectionViewCell.xib in Resources */,
 				310A57582642EBF9008B010B /* LaunchScreen.storyboard in Resources */,
 				310A57552642EBF9008B010B /* Assets.xcassets in Resources */,
-				310A57532642EBF8008B010B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +228,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				310A57502642EBF8008B010B /* ViewController.swift in Sources */,
 				310A574C2642EBF8008B010B /* AppDelegate.swift in Sources */,
 				31ACAD282649A5FE00850ABA /* MarketCollectionViewCell.swift in Sources */,
 				31ACAD192647D28300850ABA /* VFoodModel.swift in Sources */,
@@ -240,20 +235,13 @@
 				310A574E2642EBF8008B010B /* SceneDelegate.swift in Sources */,
 				31ACAD212649846300850ABA /* MarketsModel.swift in Sources */,
 				31ACAD242649A57700850ABA /* MarketViewController.swift in Sources */,
+				31ACAD2B264AFEDB00850ABA /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		310A57512642EBF8008B010B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				310A57522642EBF8008B010B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		310A57562642EBF9008B010B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

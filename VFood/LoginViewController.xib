@@ -18,15 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-6Q-6zg">
-                    <rect key="frame" x="109" y="431" width="203" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boU-6Q-6zg">
+                    <rect key="frame" x="105.5" y="427" width="203" height="42"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Log in with VK App"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="boU-6Q-6zg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ix1-hW-8ku"/>
+                <constraint firstItem="boU-6Q-6zg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kGj-rM-QuN"/>
+            </constraints>
             <point key="canvasLocation" x="129" y="59"/>
         </view>
     </objects>

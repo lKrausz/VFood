@@ -8,7 +8,16 @@
 import UIKit
 import VK_ios_sdk
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, VKSdkDelegate {
+    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        print("token = \(String(describing: result.token))")
+        Configs.shared.setToken(token: result.token)
+    }
+    
+    func vkSdkUserAuthorizationFailed() {
+        print("fail")
+    }
+    
 
     var window: UIWindow?
 
@@ -19,12 +28,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
             }
         }
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        VKSdk.initialize(withAppId: Configs.shared.VK_APP_ID).register(self)
+        VKSdk.wakeUpSession(Configs.shared.score, complete: { [self](state: VKAuthorizationState,error: Error?) -> Void in
+            if state == .authorized {
+                guard let windowScene = (scene as? UIWindowScene) else { return }
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let controller = MarketViewController.init()
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+                self.window?.windowScene = windowScene
+            } else {
+                VKSdk.authorize(Configs.shared.score)
+                guard let windowScene = (scene as? UIWindowScene) else { return }
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let controller = LoginViewController.init()
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+                self.window?.windowScene = windowScene
+            }
+            return
+        })
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

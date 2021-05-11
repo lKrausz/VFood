@@ -6,24 +6,43 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 class LoginViewController: UIViewController {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginButtonClicked(_ sender: Any) {
+        let sdkInstance = VKSdk.initialize(withAppId: Configs.shared.VK_APP_ID)
+        sdkInstance?.register(self)
+        sdkInstance?.uiDelegate = self
     }
-    */
 
+}
+
+extension LoginViewController: VKSdkDelegate, VKSdkUIDelegate {
+    
+    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        print("token = \(String(describing: result.token))")
+        Configs.shared.setToken(token: result.token)
+    }
+    
+    func vkSdkUserAuthorizationFailed() {
+        print("fail")
+    }
+    
+    func vkSdkShouldPresent(_ controller: UIViewController!) {
+        print("should present")
+    }
+    
+    func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
+        print("captcha")
+    }
+    
+    
 }

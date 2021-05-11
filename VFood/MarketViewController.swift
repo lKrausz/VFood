@@ -15,6 +15,7 @@ class MarketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        marketCollectionView.backgroundColor = .blue
     }
     
     func createCell() {
